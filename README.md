@@ -52,13 +52,6 @@ Por isso o Harvey está sempre lá, te dando bom dia, boa tarde ou boa noite, e 
 - Menu lateral para navegação.
 - Botões coloridos e com efeitos visuais para cada ação (✔ concluir, ✎ editar, ✖ excluir, ↩ restaurar).
 
----
-
-## 📦 Como Executar
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seuusuario/harveyboard.git
-
 
 ---
 
