@@ -1,0 +1,255 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('Fundo.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: orange;
+  box-shadow: 0 0 15px orange;
+  z-index: 1000;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: orange;
+  z-index: 1100;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.6);
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px orange;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background-color: rgba(255,165,0,0.2);
+}
+
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side-menu a {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: orange;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+}
+
+.side-menu a:hover {
+  background-color: rgba(255,165,0,0.2);
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  padding: 80px 40px 40px;
+  box-sizing: border-box;
+}
+
+.harvey {
+  max-height: 80vh;
+}
+
+.dialog-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px orange;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+}
+
+.dialog-box p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  background-color: rgba(255, 165, 0, 0.2);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-actions button {
+  margin-left: 5px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-actions .done {
+  background-color: green;
+  color: white;
+}
+
+.task-actions .edit {
+  background-color: blue;
+  color: white;
+}
+
+.task-actions .delete {
+  background-color: red;
+  color: white;
+}
+/* estilos principais mantidos */
+
+/* Caixa de nova tarefa */
+.new-task-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#newTaskInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid orange;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgba(255,255,255,0.9);
+  color: black;
+}
+
+.new-task-btn {
+  background: linear-gradient(135deg, orange, darkorange);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px orange;
+  transition: 0.3s;
+}
+
+.new-task-btn:hover {
+  background: linear-gradient(135deg, darkorange, orangered);
+  transform: scale(1.05);
+}
+
+/* Botões de ação */
+.task-actions button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.task-actions .done {
+  background-color: green;
+  color: white;
+}
+
+.task-actions .done:hover {
+  background-color: darkgreen;
+  transform: scale(1.05);
+}
+
+.task-actions .edit {
+  background-color: blue;
+  color: white;
+}
+
+.task-actions .edit:hover {
+  background-color: darkblue;
+  transform: scale(1.05);
+}
+
+.task-actions .delete {
+  background-color: red;
+  color: white;
+}
+
+.task-actions .delete:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+/* Container da lista com rolagem interna */
+.task-list-container {
+  max-height: 250px; /* altura máxima da caixa */
+  overflow-y: auto;  /* só aparece a barra se necessário */
+  padding-right: 5px;
+}
+
+/* Estilo da barra de rolagem */
+.task-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 4px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb:hover {
+  background: darkorange;
+}
+
+.task-list-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}

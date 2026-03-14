@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* sem barra de rolagem */
+  font-family: 'Segoe UI', sans-serif;
+  background: url('Fundo.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: orange;
+  box-shadow: 0 0 15px orange;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.harvey {
+  max-height: 80vh;
+}
+
+.dialog-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px orange;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.dialog-box p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dialog-box input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.dialog-box button {
+  padding: 10px;
+  background-color: orange;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dialog-box button:hover {
+  background-color: darkorange;
+}

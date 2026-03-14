@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lixeira</title>
+  <link rel="stylesheet" href="Lixeira.css" />
+</head>
+<body>
+  <header>HarveyBoard</header>
+
+  <span id="menuBtn" class="menu-btn" onclick="openMenu()">☰ Menu</span>
+
+  <nav id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+    <a href="Página 3.html">Voltar às Tarefas</a>
+    <a href="Concluídas.html">Concluídas</a>
+  </nav>
+
+  <div class="container">
+    <img src="harvey.png" alt="Harvey" class="harvey" />
+    <div class="dialog-box">
+      <p id="harveyMessage">Aqui estão suas tarefas apagadas:</p>
+      <ul id="deletedList"></ul>
+    </div>
+  </div>
+
+  <script src="Lixeira.js"></script>
+</body>
+</html>
